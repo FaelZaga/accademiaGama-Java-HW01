@@ -155,10 +155,11 @@ public class Program {
 
             System.out.println("Thank you and have a nice day! ;)");
 
-            sc.close();
         }catch (InputMismatchException e) {
             System.out.println("Error! Only number allowed");
         }
+
+        sc.close();
     }
 
 }
