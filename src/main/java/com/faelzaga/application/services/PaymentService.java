@@ -1,6 +1,6 @@
 package main.java.com.faelzaga.application.services;
 
-import main.java.com.faelzaga.application.entities.CarData;
+import main.java.com.faelzaga.application.entities.CarPayment;
 import main.java.com.faelzaga.application.entities.Invoice;
 
 public class PaymentService {
@@ -15,14 +15,14 @@ public class PaymentService {
         this.taxFeeService = taxFeeService;
     }
 
-    public void processInvoice(CarData carData) {
+    public void processInvoice(CarPayment carPayment) {
         double tax = 0;
-        if (!carData.getVehicle().isAdapted()) {
+        if (!carPayment.getVehicle().isAdapted()) {
             tax = taxService.tax(carPrice);
         }
 
         double feeTax = feeTax = taxFeeService.tax(carPrice);
 
-        carData.setInvoice(new Invoice(carPrice, tax,feeTax));
+        carPayment.setInvoice(new Invoice(carPrice, tax,feeTax));
     }
 }

@@ -4,13 +4,13 @@ import main.java.com.faelzaga.application.entities.client.Client;
 import main.java.com.faelzaga.application.entities.employee.Employee;
 import main.java.com.faelzaga.application.entities.vehicle.Vehicle;
 
-public class CarData {
+public class CarPayment {
     private Client client;
     private Employee employee;
     private Vehicle vehicle;
     private Invoice invoice;
 
-    public CarData(Client client, Vehicle vehicle) {
+    public CarPayment(Client client, Vehicle vehicle) {
         this.client = client;
         this.vehicle = vehicle;
     }

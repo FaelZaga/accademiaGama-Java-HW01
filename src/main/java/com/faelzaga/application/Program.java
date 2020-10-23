@@ -1,6 +1,6 @@
 package main.java.com.faelzaga.application;
 
-import main.java.com.faelzaga.application.entities.CarData;
+import main.java.com.faelzaga.application.entities.CarPayment;
 import main.java.com.faelzaga.application.entities.client.Client;
 import main.java.com.faelzaga.application.entities.employee.Employee;
 import main.java.com.faelzaga.application.entities.employee.Intern;
@@ -32,11 +32,11 @@ public class Program {
         sc.nextLine();
         String isAdapted = sc.nextLine();
 
-        CarData cd;
+        CarPayment cd;
         if (isAdapted.equalsIgnoreCase("y")) {
-            cd = new CarData(new Client(clientName),new AdaptedVehicle(carModel));
+            cd = new CarPayment(new Client(clientName),new AdaptedVehicle(carModel));
         }else{
-            cd = new CarData(new Client(clientName),new NormalVehicle(carModel));
+            cd = new CarPayment(new Client(clientName),new NormalVehicle(carModel));
         }
 
         System.out.println("-------------Enter-manager-data------------");
