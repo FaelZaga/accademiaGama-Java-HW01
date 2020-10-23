@@ -1,22 +1,12 @@
-package main.java.com.faelzaga.application.entities;
+package main.java.com.faelzaga.application.entities.employee;
 
-import java.util.Random;
-
-public abstract class Employee {
+public class Employee {
     protected String name;
     protected Boolean salePermission;
 
     public Employee(String name, Boolean salePermission){
         this.name = name;
         this.salePermission = salePermission;
-    }
-
-    public double sell(Vehicle vehicle, Client client) {
-        if (client.getInstallment()>1) {
-            return vehicle.getValue()*1.0189/client.getInstallment();
-        }else{
-            return vehicle.getValue()-vehicle.getValue()*0.10;
-        }
     }
 
     public void setSalePermission(Boolean salePermission) {
